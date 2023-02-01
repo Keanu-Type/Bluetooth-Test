@@ -1,3 +1,5 @@
+//Devices: Android Phone, Arduino UNO R3, HC-05, Sg90 Servo, 2.2K Resistor, 4.7K Resistor. 
+
 //NOTE: IF YOU ARE GOING TO USE SOFTWARESERIAL, USE DIFFERENT RX AND TX.
 //NOTE: HC-05 TX -> ARDUINO RX & HC-05 RX ->ARDUINO TX. COMMON MISTAKE TO CONNECT TX -> TX etc.
 //NOTE: USE VOLTAGE DIVIDER WITH 2.2K RESISTOR AND 4.7K RESISTOR(SEE DIAGRAM) FOR SOFTWARESERIAL SETUP
@@ -12,7 +14,7 @@
 
 //KEANU P. BERCHES
 
-#include <SoftwareSerial.h>
+#include <SoftwareSerial.h>       
 #include <Servo.h>
 Servo BTServo;
 SoftwareSerial BTSerial(10, 11);  // For Software Serial, the Pin 10 will become RX and Pin 11 will become TX
@@ -24,7 +26,7 @@ void setup() {
   digitalWrite(ledpin, LOW);  //L is OFF  
   Serial.begin(9600);         //SOFTWARE SERIALNAME.BEGIN(FREQUENCY)
   BTSerial.begin(9600);
-  BTServo.write(0);
+  BTServo.write(0);           //SET YOUR SERVO TO 0 ANGLE
 }
 
 void loop() {
@@ -51,5 +53,5 @@ void loop() {
     char c = Serial.read(); //THIS WILL READ WHAT WAS THE DATA THAT WAS SENT FROM DEVICE
     BTSerial.write(c); //THIS WILL OUTPUT CHAR
   }
-  //NOTE: SERIAL.AVAILABLE AND BTSERIAL.AVAILABLE RUNS AT THE SAME TIME
+  //NOTE: SERIAL.AVAILABLE AND BTSERIAL.AVAILABLE RUNS AT THE SAME TIME.
 }
