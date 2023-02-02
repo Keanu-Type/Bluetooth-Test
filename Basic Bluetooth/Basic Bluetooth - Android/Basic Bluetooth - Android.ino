@@ -13,7 +13,7 @@
 //           NOW YOUR HC-05 IS CONNECTED
 
 //KEANU P. BERCHES
-
+//PSWD: ARDUINO
 #include <SoftwareSerial.h>       
 #include <Servo.h>
 Servo BTServo;
