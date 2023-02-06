@@ -1,7 +1,7 @@
 //Note: Master and Slave must have same password
 //Note: Master HC-05 won't get paired to other device for some reason
 //      to unpair, enter to AT Mode by wiring EN pin to 5V along with HC-05's VCC pin.
-//      enter to Serial Monitor 9600 or 38400. use this code instead: 
+//      enter to Serial Monitor 9600 or 38400. use this code instead:  https://github.com/Keanu-Type/Bluetooth-Test/blob/master/Clean%20Code%20for%20AT%20Command/Clean%20Code%20for%20AT%20Command.ino
 //      upload that then enter this following commands: AT+ORGL
 //      AT+ORGL will reset everything. including HC-05 Name, Password, Status, and paired device. use only when in trouble
 //      See more AT Commands here: https://s3-sa-east-1.amazonaws.com/robocore-lojavirtual/709/HC-05_ATCommandSet.pdf

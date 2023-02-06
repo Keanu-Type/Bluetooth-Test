@@ -14,7 +14,6 @@ void setup()
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 //if(BTSerial.available()) == it means that if your other partner/slave bluetooth send something in 
 //BTSerial(thats BTSerial.write('G')) or RESPONDER line, this code will respond. thats (BTSerial.write(Z)) in other code.(around line 18-21)
   if(BTSerial.available()){ //ACTIVATER = to send signal
